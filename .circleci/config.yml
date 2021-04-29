@@ -53,14 +53,14 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/project
-      - run: yarn run test:e2e
+      - run: set -e && yarn run test:e2e
 
   test-e2e-bs-ie9:
     <<: *defaults
     steps:
       - attach_workspace:
           at: ~/project
-      - run: yarn run test:e2e:ie9
+      - run: set -e && yarn run test:e2e:ie9
 
 workflows:
   version: 2
